@@ -28,6 +28,8 @@ public class Subsystems {
   public final Arm algaeArm = new Arm(ArmParameters.AlgaeArm);
   public final AlgaeGrabber algaeGrabber = new AlgaeGrabber();
 
+  public final Arm climber = new Arm(ArmParameters.Climber);
+
   public final Optional<AprilTagSubsystem> aprilTag =
       newOptionalSubsystem(
           AprilTagSubsystem.class,
@@ -46,7 +48,7 @@ public class Subsystems {
             Arrays.asList(elevator, coralArm, algaeArm, algaeGrabber, coralRoller));
 
     // Add all non-manipulator subsystems to the `all` list.
-    var all = new ArrayList<Subsystem>(Arrays.asList(drivetrain));
+    var all = new ArrayList<Subsystem>(Arrays.asList(drivetrain, climber));
 
     // Add optional subsystems to the appropriate list.
     if (aprilTag.isPresent()) {

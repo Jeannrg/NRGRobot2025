@@ -18,8 +18,8 @@ public enum ArmParameters {
   CoralArm(
       MotorParameters.KrakenX60,
       1,
-      1,
-      1,
+      25,
+      16, //TODO: convert from inches to ?
       1,
       1,
       RobotConstants.CAN.TalonFX.CORAL_ARM_MOTOR_ID,
@@ -28,11 +28,20 @@ public enum ArmParameters {
       MotorParameters.KrakenX60,
       1,
       1,
-      1,
+      20, //TODO: convert from inches to ?
       1,
       1,
       RobotConstants.CAN.TalonFX.ALGAE_ARM_MOTOR_ID,
-      RobotConstants.DigitalIO.ALGAE_ARM_ABSOLUTE_ENCODER);
+      RobotConstants.DigitalIO.ALGAE_ARM_ABSOLUTE_ENCODER),
+  Climber(
+      MotorParameters.KrakenX60,
+      1,
+      1,
+      1,
+      1,
+      1,
+      RobotConstants.CAN.TalonFX.CLIMBER_MOTOR_ID,
+      RobotConstants.DigitalIO.CLIMBER_ABSOLUTE_ENCODER);
 
   private final MotorParameters motorParameters;
   private final double gearRatio;

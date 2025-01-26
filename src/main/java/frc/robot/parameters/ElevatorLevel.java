@@ -8,11 +8,14 @@
 package frc.robot.parameters;
 
 public enum ElevatorLevel {
-  STOWED(0, 0), // TO-DO: Determine correct values for height and pivot angles
-  L1(0, 0),
-  L2(0, 0),
-  L3(0, 0),
-  L4(0, 0);
+  STOWED(0, 0), // TO-DO: Determine correct values for height and pivot angles (coral scoring)
+  L1(1, 0),
+  L2(2, 0),
+  L3(3, 0),
+  L4(4, 0),
+
+  A2(1.5, 0), //TO-DO: Determine correct values for height and pivot angles (algae removal)
+  A3(2.5, 0);
 
   private final double height;
   private final double pivotAngle;
